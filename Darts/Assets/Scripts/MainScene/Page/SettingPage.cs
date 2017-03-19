@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GamePage : Page_Base {
+public class SettingPage : Page_Base {
 
 	// Use this for initialization
 	void Start () {
