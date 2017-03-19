@@ -14,6 +14,7 @@ public abstract class Page_Base : MonoBehaviour {
 	///  返回上一頁
 	/// </summary>
 	public void OnBackPageBtn(){
+		print ("<color=blue><size=25>" + "頁面返回" + "</size></color>");
 		PageManerger.BackPage ();
 	}
 
