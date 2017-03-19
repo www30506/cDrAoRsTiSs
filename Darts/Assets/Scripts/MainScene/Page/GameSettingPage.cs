@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GameSettingPage : Page_Base {
+	[SerializeField]private Text gameTitle;
 	[SerializeField]private GameObject[] legsObjs;
 	[SerializeField]private GameObject[] playersObjs;
 
@@ -18,6 +19,7 @@ public class GameSettingPage : Page_Base {
 	public override IEnumerator IE_OnOpen(){
 		OnSetTotalLegsBtn (1);
 		OnSetMaxPlayerCountBtn (1);
+		gameTitle.text = Game.Type.ToString ();
 		yield return null;
 	}
 
@@ -57,5 +59,10 @@ public class GameSettingPage : Page_Base {
 		for (int i = 0; i < playersObjs.Length; i++) {
 			playersObjs[i].GetComponent<Image> ().color = Color.white;
 		}
+	}
+
+	public void OnStartGameBtn(){
+		print ("<color=blue><size=25>" + "開始遊戲" + "</size></color>");
+
 	}
 }
