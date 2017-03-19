@@ -14,6 +14,15 @@ public class SettingPage : Page_Base {
 		
 	}
 
+	public override IEnumerator IE_OnOpen(){
+		print ("<color=green><size=25>" + "設定頁面開啟" + "</size></color>");
+
+		string _nowLanguage = I2.Loc.LocalizationManager.CurrentLanguage;
+		UnselectAllLanguage ();
+		SelectLanguage (_nowLanguage);
+		yield return null;
+	}
+
 	public void OnSetLanguageBtn(string p_language){
 		print ("<color=blue><size=25>" + "設定語言"+ p_language+ "</size></color>");
 		I2.Loc.LocalizationManager.CurrentLanguage = p_language;

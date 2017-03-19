@@ -4,3 +4,4 @@ Darts/Temp/UnityLockfile
 Darts/ProjectSettings/
 Darts/Temp/
 Darts/Assembly-CSharp/
+*.csproj

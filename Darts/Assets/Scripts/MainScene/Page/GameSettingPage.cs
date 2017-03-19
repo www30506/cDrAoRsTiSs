@@ -17,8 +17,18 @@ public class GameSettingPage : Page_Base {
 	}
 
 	public override IEnumerator IE_OnOpen(){
-		OnSetTotalLegsBtn (1);
-		OnSetMaxPlayerCountBtn (1);
+		print ("<color=green><size=25>" + "設定頁面開啟" + "</size></color>");
+
+//		OnSetTotalLegsBtn (1);
+		Game.TotalLegs = 1;
+		UnselectALLLegs ();
+		SelectLegs (1);
+
+//		OnSetMaxPlayerCountBtn (1);
+		Game.MaxPlayer = 1;
+		UnselectAllPlayerCount ();
+		SelcePlayerCount (1);
+
 		gameTitle.text = Game.Type.ToString ();
 		yield return null;
 	}
