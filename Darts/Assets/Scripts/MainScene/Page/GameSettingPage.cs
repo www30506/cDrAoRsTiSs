@@ -74,6 +74,9 @@ public class GameSettingPage : Page_Base {
 	public void OnStartGameBtn(){
 		print ("<color=blue><size=25>" + "開始遊戲" + "</size></color>");
 		Game.NowLegs = 0;
-
+		print ("Max Player " + Game.MaxPlayer);
+		print ("GameType " + Game.Type);
+		print ("Total Legs " + Game.TotalLegs);
+		SceneController.ChangeScene (SceneType.GameScene);
 	}
 }
