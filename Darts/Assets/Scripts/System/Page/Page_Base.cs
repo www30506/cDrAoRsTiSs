@@ -33,6 +33,7 @@ public abstract class Page_Base : MonoBehaviour {
 
 		maskObj.SetActive (true);
 		isClosing = true;
+		OnClose ();
 		yield return StartCoroutine (IE_OnClose ());
 		isClosing = false;
 		maskObj.SetActive (false);
@@ -55,6 +56,8 @@ public abstract class Page_Base : MonoBehaviour {
 		yield return null;
 	}
 
+	public virtual void OnClose(){
+	}
 	/// <summary>
 	/// 開啟該頁面
 	/// 由PageManerger呼叫
@@ -70,6 +73,7 @@ public abstract class Page_Base : MonoBehaviour {
 
 		maskObj.SetActive (true);
 		isOpening = false;
+		OnOpen ();
 		yield return StartCoroutine (IE_OnOpen ());
 		isOpening = true;
 		maskObj.SetActive (false);
@@ -81,6 +85,9 @@ public abstract class Page_Base : MonoBehaviour {
 	/// </summary>
 	public virtual IEnumerator IE_OnOpen(){
 		yield return null;
+	}
+
+	public virtual void OnOpen(){
 	}
 
 	/// <summary>
