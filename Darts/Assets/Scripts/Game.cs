@@ -7,4 +7,5 @@ public class Game {
 	public static int NowLegs;
 	public static int TotalLegs;
 	public static int MaxPlayer;
+	public static int MaxRound = 10;
 }
